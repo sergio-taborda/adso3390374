@@ -60,7 +60,7 @@ body {
             }
 
             img {
-                border: 6px solid rgba(137, 187, 91, 0.8);
+                border: 6px solid rgba(0, 0, 0, 0.8);
                 border-radius: 50%;
                 height: 280px;
                 object-fit: cover;
@@ -89,7 +89,7 @@ body {
                 width: 300px;
 
                 span {
-                    background-color: #874e19;
+                    background-color: #000000;
                     color: rgba(255, 255, 255, 0.8);
                     font-size: 1.6rem;
                     border-radius: 4rem;
@@ -117,7 +117,7 @@ body {
 
             a:is(:hover) {
                 transform: scale(1.05) translateX(10px);
-                background-color: #874e19;
+                background-color: #000000;
                 color: #fff9;
 
                 span {
