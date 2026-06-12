@@ -257,34 +257,58 @@
 
             <section>
                 <h2>17-challenge<em>¿?</em></h2>
-                <p>It generates an HTML header navigation bar (a responsive navbar) with the following structure:</p>
-                <h4>Example:</h4>
-                <p>header#header>nav.navbar.navbar-inverse>.container>.navbar-header>button.navbar-toggle>span.sr-only{Toggle
-                    navigation}+span.icon-bar+span.icon-bar+span.icon-bar^a.navbar-brand[href="index.php"]>img[src="imgs/logo.png"][alt=""]^^.collapse>ul.nav.navbar-nav>li>a.link[href="index.html"]{Inicio}+li.active.link>a[href="login.html"]{Ingresar}+li>a.link[href="registro.html"]{Registrarse}+li>a.link[href="#"]{contacto.html}
+
+                <p>
+                    It generates an HTML header navigation bar (a responsive navbar) with the following structure:
                 </p>
+
+                <h4>Example:</h4>
+
+                <p>
+                    header#header>nav.navbar.navbar-inverse>.container>.navbar-header>button.navbar-toggle[type="button"]>span.sr-only{Toggle
+                    navigation}+span.icon-bar+span.icon-bar+span.icon-bar^a.navbar-brand[href="index.php"]>img[src="imgs/logo.png"][alt=""]^^div.collapse.navbar-collapse>ul.nav.navbar-nav>li>a.link[href="index.html"]{Inicio}+li.active>a.link[href="login.html"]{Ingresar}+li>a.link[href="registro.html"]{Registrarse}+li>a.link[href="contacto.html"]{Contacto}
+                </p>
+
                 <h4>Result:</h4>
+
                 <xmp>
                     <header id="header">
                         <nav class="navbar navbar-inverse">
                             <div class="container">
-                                <div class="navbar-header"><button class="navbar-toggle"><span class="sr-only">Toggle
-                                            navigation</span><span class="icon-bar"></span><span
-                                            class="icon-bar"></span><span class="icon-bar"></span></button><a
-                                        href="index.php" class="navbar-brand"><img src="imgs/logo.png" alt=""></a></div>
-                                <div class="collapse">
+
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+
+                                    <a href="index.php" class="navbar-brand">
+                                        <img src="imgs/logo.png" alt="">
+                                    </a>
+                                </div>
+
+                                <div class="collapse navbar-collapse">
                                     <ul class="nav navbar-nav">
                                         <li>
                                             <a href="index.html" class="link">Inicio</a>
-                                        <li class="active link">
-                                            <a href="login.html">Ingresar</a>
+                                        </li>
+
+                                        <li class="active">
+                                            <a href="login.html" class="link">Ingresar</a>
+                                        </li>
+
                                         <li>
                                             <a href="registro.html" class="link">Registrarse</a>
-                                        <li><a href="#" class="link">contacto.html</a></li>
                                         </li>
-                                        </li>
+
+                                        <li>
+                                            <a href="contacto.html" class="link">Contacto</a>
                                         </li>
                                     </ul>
                                 </div>
+
                             </div>
                         </nav>
                     </header>
