@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>01-Emmet</title>
     <link rel="stylesheet" href="../src/css/master.css">
 </head>
+
 <body class="emmet">
     <a href="../index.html" class="btn-home">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M240,210H222V131.17l5.76,5.76a6,6,0,0,0,8.48-8.49L137.9,30.09a14,14,0,0,0-19.8,0L19.76,128.44a6,6,0,0,0,8.48,8.49L34,131.17V210H16a6,6,0,0,0,0,12H240a6,6,0,0,0,0-12ZM46,119.17l80.58-80.59a2,2,0,0,1,2.84,0L210,119.17V210H158V152a6,6,0,0,0-6-6H104a6,6,0,0,0-6,6v58H46ZM146,210H110V158h36Z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path
+                d="M240,210H222V131.17l5.76,5.76a6,6,0,0,0,8.48-8.49L137.9,30.09a14,14,0,0,0-19.8,0L19.76,128.44a6,6,0,0,0,8.48,8.49L34,131.17V210H16a6,6,0,0,0,0,12H240a6,6,0,0,0,0-12ZM46,119.17l80.58-80.59a2,2,0,0,1,2.84,0L210,119.17V210H158V152a6,6,0,0,0-6-6H104a6,6,0,0,0-6,6v58H46ZM146,210H110V158h36Z">
+            </path>
+        </svg>
     </a>
     <main>
         <header>
@@ -16,20 +22,276 @@
             <img src="../src/imgs/logo-emmet.svg" alt="Logo">
             <h4>Plugin for faster HTML and CSS coding</h4>
         </header>
+
         <section>
-            <h2>01-Child <em> > </em></h2>
+            <h2>01-Nesting Elements <em> > </em></h2>
             <p>Creates child elements</p>
             <h4>Example</h4>
             <p>ul>li>a</p>
             <h4>Result:</h4>
-<xmp>
-    <ul>
-        <li>
-            <a href=""></a>
-        </li>
-    </ul>
-</xmp>
+            <xmp>
+                <ul>
+                    <li>
+                        <a href=""></a>
+                    </li>
+                </ul>
+            </xmp>
         </section>
+
+        <section>
+            <h2>02-Sibling Elements <em> + </em></h2>
+            <p>Creates sibling elements</p>
+            <h4>Example</h4>
+            <p>section+header+nav</p>
+            <h4>Result:</h4>
+            <xmp>
+                <section></section>
+                <header></header>
+                <nav></nav>
+            </xmp>
+        </section>
+
+        <section>
+            <h2>03-Repeat Elements <em> * </em></h2>
+            <p>Creates multiple elements</p>
+            <h4>Example</h4>
+            <p>ul>li*3</p>
+            <h4>Result:</h4>
+            <xmp>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </xmp>
+        </section>
+
+        <section>
+            <h2>04-Class Attribute <em> . </em></h2>
+            <p>Creates elements with a specific class</p>
+            <h4>Example</h4>
+            <p>
+                div.contenedor
+                .contenedor2
+            </p>
+            <h4>Result:</h4>
+            <xmp>
+                <div class="contenedor"></div>
+                <div class="contenedor2"></div>
+            </xmp>
+        </section>
+
+        <section>
+            <h2>05-Multiple Classes <em> ... </em></h2>
+            <p>Creates elements with multiple classes</p>
+            <h4>Example</h4>
+            <p>
+                div.clase1.clase2.clase3
+            </p>
+            <h4>Result:</h4>
+            <xmp>
+                <div class="clase1 clase2 clase3"></div>
+            </xmp>
+        </section>
+
+        <section>
+            <h2>06-Identifier Attribute <em> # </em></h2>
+            <p>Creates elements with a specific id</p>
+            <h4>Example</h4>
+            <p>
+                nav#menu
+            </p>
+            <h4>Result:</h4>
+            <xmp>
+                <nav id="menu"></nav>
+            </xmp>
+        </section>
+
+        <section>
+            <h2>07-Add Text <em> {} </em></h2>
+            <p>Creates elements with text content</p>
+            <h4>Example</h4>
+            <p>
+                div{Lorem Ipsum Dolor}
+                a{Click Aquí}
+            </p>
+            <h4>Result:</h4>
+            <xmp>
+                <div>Lorem Ipsum Dolor</div>
+                <a href="">Click Aquí</a>
+            </xmp>
+        </section>
+
+        <section>
+            <h2>08-Customize Attributes <em> [] </em></h2>
+            <p>Creates elements with custom attributes</p>
+            <h4>Example</h4>
+            <p>
+                a[href=www.google.com]
+            </p>
+            <h4>Result:</h4>
+            <xmp>
+                <a href="www.google.com"></a>
+            </xmp>
+        </section>
+
+        <section>
+            <h2>09-Consecutive Numbers <em> $ </em></h2>
+            <p>Creates elements with consecutive numbers</p>
+            <h4>Example</h4>
+            <p>
+                ul>li.num$*3
+            </p>
+            <h4>Result:</h4>
+            <xmp>
+                <ul>
+                    <li class="num1"></li>
+                    <li class="num2"></li>
+                    <li class="num3"></li>
+                </ul>
+            </xmp>
+        </section>
+
+        <section>
+            <h2>10-Address Consecutive Numbers <em> @- </em></h2>
+            <p>Creates elements with consecutive numbers</p>
+            <h4>Example</h4>
+            <p>
+                ul>li.num$@-*3
+            </p>
+            <h4>Result:</h4>
+            <xmp>
+                <ul>
+                    <li class="num3"></li>
+                    <li class="num2"></li>
+                    <li class="num1"></li>
+                </ul>
+            </xmp>
+        </section>
+
+        <section>
+            <h2>11-Base Consecutive Numbers <em> @n </em></h2>
+            <p>Creates elements with consecutive numbers</p>
+            <h4>Example</h4>
+            <p>
+                ul>li.num$@3*4
+            </p>
+            <h4>Result:</h4>
+            <xmp>
+                <ul>
+                    <li class="num3"></li>
+                    <li class="num4"></li>
+                    <li class=“num5"></li>
+                    <li class=“num6"></li>
+                </ul>
+            </xmp>
+        </section>
+
+        <section>
+            <h2>12-Level Up <em> ^ </em></h2>
+            <p>Creates elements at a higher level in the hierarchy</p>
+            <h4>Example</h4>
+            <p>
+                section>article>div^p
+            </p>
+            <h4>Result:</h4>
+            <xmp>
+                <section>
+                    <article>
+                        <div></div>
+                    </article>
+                    <p></p>
+                </section>
+            </xmp>
+        </section>
+
+        <section>
+            <h2>13-Group Elements <em> () </em></h2>
+            <p>Creates elements at a higher level in the hierarchy</p>
+            <h4>Example</h4>
+            <p>
+                (header>nav)(section>article)
+            </p>
+            <h4>Result:</h4>
+            <xmp>
+                <header>
+                    <nav></nav>
+                </header>
+                <section>
+                    <article></article>
+                </section>
+            </xmp>
+        </section>
+
+        <section>
+            <h2>14-Lorem<em> Lorem </em></h2>
+            <p>Generates placeholder text. </p>
+            <h4>Example:</h4>
+            <p>lorem</p>
+            <h4>Result:</h4>
+            <xmp>
+                Lorem ipsum dolor sit amet.
+            </xmp>
+        </section>
+
+        <section>
+            <h2>15-HTML Documents<em>Html</em></h2>
+            <p>Creates various HTML document types. </p>
+            <h4>Example:</h4>
+            <p>html:xs</p>
+            <h4>Result:</h4>
+            <xmp>
+                <html:xs></html:xs>
+            </xmp>
+        </section>
+
+        <section>
+            <h2>16-Meta Tags<em>Meta</em></h2>
+            <p>Generates meta tags.</p>
+            <h4>Example:</h4>
+            <p>meta:vp</p>
+            <h4>Result:</h4>
+            <xmp>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            </xmp>
+
+            <section>
+                <h2>17-challenge<em>¿?</em></h2>
+                <p>It generates an HTML header navigation bar (a responsive navbar) with the following structure:</p>
+                <h4>Example:</h4>
+                <p>header#header>nav.navbar.navbar-inverse>.container>.navbar-header>button.navbar-toggle>span.sr-only{Toggle
+                    navigation}+span.icon-bar+span.icon-bar+span.icon-bar^a.navbar-brand[href="index.php"]>img[src="imgs/logo.png"][alt=""]^^.collapse>ul.nav.navbar-nav>li>a.link[href="index.html"]{Inicio}+li.active.link>a[href="login.html"]{Ingresar}+li>a.link[href="registro.html"]{Registrarse}+li>a.link[href="#"]{contacto.html}
+                </p>
+                <h4>Result:</h4>
+                <xmp>
+                    <header id="header">
+                        <nav class="navbar navbar-inverse">
+                            <div class="container">
+                                <div class="navbar-header"><button class="navbar-toggle"><span class="sr-only">Toggle
+                                            navigation</span><span class="icon-bar"></span><span
+                                            class="icon-bar"></span><span class="icon-bar"></span></button><a
+                                        href="index.php" class="navbar-brand"><img src="imgs/logo.png" alt=""></a></div>
+                                <div class="collapse">
+                                    <ul class="nav navbar-nav">
+                                        <li>
+                                            <a href="index.html" class="link">Inicio</a>
+                                        <li class="active link">
+                                            <a href="login.html">Ingresar</a>
+                                        <li>
+                                            <a href="registro.html" class="link">Registrarse</a>
+                                        <li><a href="#" class="link">contacto.html</a></li>
+                                        </li>
+                                        </li>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </header>
+                </xmp>
+            </section>
+
     </main>
 </body>
+
 </html>
