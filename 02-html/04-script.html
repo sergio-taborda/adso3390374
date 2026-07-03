@@ -24,11 +24,10 @@
         <section>
             <h3>Welcome: <small class="user"></small></h3>
         </section>
-
         <script>
             const user = document.querySelector('.user')
             let username = prompt("What's your name?")
-            if(username) {
+            if (username) {
                 user.textContent = username + '😊'
             } else {
                 user.textContent = 'Guest 😭'

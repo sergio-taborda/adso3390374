@@ -31,7 +31,6 @@
             textarea,
             button {
                 padding: 0.2rem;
-
             }
 
             input[type=button],
@@ -44,7 +43,8 @@
                 width: fit-content;
                 margin: 10px auto;
 
-                a:is(:link, :visited) {
+                a:is(:link,
+                    :visited) {
                     background-color: #0004;
                     color: #fff;
                     padding: 8px;
@@ -52,7 +52,8 @@
                     transition: all 0.4s ease-in;
                 }
 
-                a:is(:hover, :active) {
+                a:is(:hover,
+                    :active) {
                     background-color: #0009;
                 }
 
@@ -93,7 +94,6 @@
             padding: 1rem;
         }
     </style>
-
 </head>
 
 <body class="emmet">
@@ -243,13 +243,10 @@
                 </fieldset>
             </div>
         </section>
-
     </main>
-
     <script>
         const passw = document.getElementById('passw')
         const toggleOpt = document.getElementById('toggle-option')
-
         toggleOpt.addEventListener('click', () => {
             if (toggleOpt.textContent == 'show') {
                 toggleOpt.textContent = 'hide'
