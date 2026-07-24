@@ -4,18 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>01-Document Style</title>
+    <title>04-Basic Selectors</title>
     <link rel="stylesheet" href="../src/css/master.css">
     <style>
-        div.flag {
-            background: linear-gradient(to bottom, #ffcd00 50%, #003087 50%, #003087 75%, #c8102e 75%);
-            height: 170px;
-            width: 300px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2rem;
-            margin: 2rem auto;
+        section#sec01 div.rotate {
+            text-align: center;
+            font-size: 4rem;
+            transform: rotate(-45deg);
+            margin-block: 2rem;
         }
     </style>
 </head>
@@ -30,13 +26,19 @@
     </a>
     <main>
         <header>
-            <h1 class="mainmenu">01-Document Style</h1>
-            <h4>This way we can include CSS within the style tag, it is very useful when you only have an html document.</h4>
+            <h1 class="mainmenu">04-Basic Selectors</h1>
+            <ul>
+                <li>Universal (*)</li>
+                <li>Type / Tag (p)</li>
+                <li>Descending (div p)</li>
+                <li>Class (.important)</li>
+                <li>ID (#cod389)</li>
+                <li>Merge (div#user3 p.title)</li>
+            </ul>
         </header>
-        <section>
-            <h4>Internal CSS</h4>
-            <div class="flag">
-                Colombia
+        <section id="sec01">
+            <div class="rotate">
+                ADSO
             </div>
         </section>
     </main>

@@ -4,18 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>01-Document Style</title>
+    <title>03-ATTR Style</title>
     <link rel="stylesheet" href="../src/css/master.css">
     <style>
         div.flag {
-            background: linear-gradient(to bottom, #ffcd00 50%, #003087 50%, #003087 75%, #c8102e 75%);
+            background: linear-gradient(to left, red 30%, white 30%, white 70%, red 70%);
             height: 170px;
             width: 300px;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin: 2rem auto;
+            color: black;
         }
     </style>
 </head>
@@ -30,13 +31,13 @@
     </a>
     <main>
         <header>
-            <h1 class="mainmenu">01-Document Style</h1>
-            <h4>This way we can include CSS within the style tag, it is very useful when you only have an html document.</h4>
+            <h1 class="mainmenu">03-ATTR Style</h1>
+            <h4>This way we can include CSS within the style attribute in the html tag, it is the least recommended way.</h4>
         </header>
         <section>
-            <h4>Internal CSS</h4>
+            <h4>Inline CSS</h4>
             <div class="flag">
-                Colombia
+                Peru
             </div>
         </section>
     </main>
