@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20-Pseudoclasses</title>
+    <link rel="stylesheet" href="../src/css/master.css">
+
+    <style>
+        a:hover {
+            color: red;
+        }
+
+        input:focus {
+            background-color: lightblue;
+        }
+
+        button:hover {
+            background-color: lightgreen;
+        }
+
+        li:first-child {
+            color: red;
+        }
+
+        li:last-child {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body class="css">
+
+    <a href="index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path
+                d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
+            </path>
+        </svg>
+    </a>
+
+    <main>
+
+        <header>
+            <h1 class="mainmenu">20-Pseudoclasses</h1>
+            <h4>Is used to define a special state of an element.</h4>
+        </header>
+
+        <section>
+
+            <h3>Hover</h3>
+
+            <a href="#">Pasa el mouse por aquí</a>
+
+            <h3>Focus</h3>
+
+            <input type="text" placeholder="Haz clic aquí">
+
+            <h3>Button Hover</h3>
+
+            <button>Pasar el mouse</button>
+
+            <h3>First Child / Last Child</h3>
+
+            <ul>
+                <li>Primer elemento</li>
+                <li>Segundo elemento</li>
+                <li>Último elemento</li>
+            </ul>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
