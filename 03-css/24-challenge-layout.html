@@ -1,123 +1,129 @@
 ```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>24-Challenge Layout</title>
+    <title>24 - Página Principal</title>
+
     <style>
-        body.panel {
-            margin: 0;
-            background-color: #149548;
-            font-family: Arial, Helvetica, sans-serif;
+        * {
+            box-sizing: border-box;
         }
 
-        .recurso {
+        body.panel-principal {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #149548;
+        }
+
+        .imagen-sprite {
             background-image: url(../src/imgs/spriteweb.png);
             background-repeat: no-repeat;
         }
 
-        header {
-            text-align: center;
+        .cabecera {
             padding: 3rem 1rem 2rem;
+            text-align: center;
         }
 
-        header .emblema {
+        .cabecera .identidad {
             width: 235px;
             height: 209px;
-            background-position: -5px -5px;
             margin: 0 auto 2rem;
+            background-position: -5px -5px;
         }
 
-        header nav {
+        .menu-principal {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 1rem;
         }
 
-        header nav a {
+        .menu-principal a {
             display: block;
-            background-color: #11542b;
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 0.9rem;
             padding: 1rem 2rem;
             border-bottom: 4px solid #fff;
+            background: #11542b;
+            color: #fff;
+            font-size: .9rem;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
         }
 
-        header nav a:hover {
-            background-color: #091c10;
+        .menu-principal a:hover {
+            background: #091c10;
             border-bottom-color: gold;
         }
 
-        .galeria {
+        .zona-galeria {
             display: flex;
             gap: 1.3rem;
+            width: calc(100% - 2.6rem);
             max-width: 1100px;
             margin: 2rem auto;
             padding: 1.3rem;
-            background-color: #11542b;
+            background: #11542b;
         }
 
-        .galeria .bloque {
+        .zona-galeria .elemento {
             position: relative;
             flex: 1;
             height: 222px;
-            border: 2px solid #fff;
             overflow: hidden;
+            border: 2px solid #fff;
         }
 
-        .galeria .bloque .recurso {
+        .elemento .imagen-sprite {
             width: 100%;
             height: 100%;
             background-position: -465px 0;
         }
 
-        .galeria .bloque h3 {
+        .elemento .titulo-elemento {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             margin: 0;
             padding: 1.6rem 0;
-            text-align: center;
+            background: rgba(255, 255, 255, .5);
             color: #000;
-            background-color: rgba(255, 255, 255, 0.5);
+            text-align: center;
         }
 
-        .galeria .bloque:hover h3 {
-            background-color: rgba(255, 255, 255, 0.8);
+        .elemento:hover .titulo-elemento {
+            background: rgba(255, 255, 255, .8);
         }
 
-        .informacion {
+        .zona-contenido {
             display: flex;
             flex-direction: column;
-            gap: 0.6rem;
+            gap: .6rem;
+            width: calc(100% - 1.2rem);
             max-width: 1100px;
             margin: 2rem auto;
-            padding: 0.6rem;
-            background-color: #11542b;
+            padding: .6rem;
+            background: #11542b;
         }
 
-        .informacion .registro {
+        .registro {
             display: flex;
             align-items: center;
             gap: 2rem;
             padding: 1.5rem 2rem;
-            background-color: #fff;
+            background: #fff;
         }
 
-        .informacion .registro .simbolo {
-            width: 86px;
+        .registro .figura {
+            flex: 0 0 86px;
             height: 95px;
-            flex-shrink: 0;
             background-position: -299px -493px;
         }
 
-        .informacion .registro p {
+        .registro .descripcion {
             flex: 1;
             margin: 0;
             color: #333;
@@ -125,121 +131,181 @@
             text-align: justify;
         }
 
-        .informacion .registro:hover p {
+        .registro:hover .descripcion {
             color: #1e7d3c;
         }
 
-        .informacion .registro .envase {
-            width: 90px;
+        .registro .producto {
+            flex: 0 0 90px;
             height: 157px;
-            flex-shrink: 0;
             background-position: -95px -213px;
         }
 
-        footer {
+        .pie-pagina {
+            width: calc(100% - 4rem);
             max-width: 1100px;
             margin: 2rem auto;
             padding: 2rem;
+            background: #fff;
             text-align: center;
-            background-color: #fff;
         }
 
-        footer .grupo {
+        .pie-pagina .imagen-grupal {
             width: 335px;
             height: 182px;
             margin: 0 auto 1.5rem;
             background-position: -465px -418px;
         }
 
-        footer nav {
+        .menu-secundario {
             display: flex;
             justify-content: space-between;
             padding-top: 1rem;
         }
 
-        footer nav a {
+        .menu-secundario a {
+            padding-bottom: .5rem;
+            border-bottom: 3px solid transparent;
             color: #333;
+            font-weight: bold;
             text-decoration: none;
             text-transform: uppercase;
-            font-weight: bold;
-            padding-bottom: 0.5rem;
-            border-bottom: 3px solid transparent;
         }
 
-        footer nav a:hover {
+        .menu-secundario a:hover {
             border-bottom-color: #149548;
         }
     </style>
 </head>
-<body class="panel">
-    <header>
-        <div class="emblema recurso"></div>
-        <nav>
+
+<body class="panel-principal">
+
+    <header class="cabecera">
+
+        <div class="identidad imagen-sprite"></div>
+
+        <nav class="menu-principal">
             <a href="#">Principal</a>
             <a href="#">Empresa</a>
-            <a href="#">Galería</a>
-            <a href="#">Soluciones</a>
-            <a href="#">Comunícate</a>
+            <a href="#">Proyectos</a>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
         </nav>
+
     </header>
 
-    <section class="galeria">
-        <div class="bloque">
-            <h3>Elemento A</h3>
-            <div class="recurso"></div>
-        </div>
-        <div class="bloque">
-            <h3>Elemento B</h3>
-            <div class="recurso"></div>
-        </div>
-        <div class="bloque">
-            <h3>Elemento C</h3>
-            <div class="recurso"></div>
-        </div>
+    <section class="zona-galeria">
+
+        <article class="elemento">
+            <h3 class="titulo-elemento">Elemento A</h3>
+            <div class="imagen-sprite"></div>
+        </article>
+
+        <article class="elemento">
+            <h3 class="titulo-elemento">Elemento B</h3>
+            <div class="imagen-sprite"></div>
+        </article>
+
+        <article class="elemento">
+            <h3 class="titulo-elemento">Elemento C</h3>
+            <div class="imagen-sprite"></div>
+        </article>
+
     </section>
 
-    <section class="informacion">
-        <div class="registro">
-            <div class="simbolo recurso"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.</p>
-            <div class="envase recurso"></div>
-        </div>
+    <section class="zona-contenido">
 
-        <div class="registro">
-            <div class="simbolo recurso"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.</p>
-            <div class="envase recurso"></div>
-        </div>
+        <article class="registro">
+            <div class="figura imagen-sprite"></div>
 
-        <div class="registro">
-            <div class="simbolo recurso"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.</p>
-            <div class="envase recurso"></div>
-        </div>
+            <p class="descripcion">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Quisquam minima blanditiis porro corporis incidunt dolorum quas,
+                exercitationem quam voluptatibus maxime perspiciatis, hic iure
+                quos cumque necessitatibus sit architecto facere aperiam fugit
+                voluptates. Cumque, delectus error quod odio suscipit culpa quis?
+                Ullam autem maxime nostrum reprehenderit mollitia.
+            </p>
 
-        <div class="registro">
-            <div class="simbolo recurso"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.</p>
-            <div class="envase recurso"></div>
-        </div>
+            <div class="producto imagen-sprite"></div>
+        </article>
 
-        <div class="registro">
-            <div class="simbolo recurso"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.</p>
-            <div class="envase recurso"></div>
-        </div>
+        <article class="registro">
+            <div class="figura imagen-sprite"></div>
+
+            <p class="descripcion">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Quisquam minima blanditiis porro corporis incidunt dolorum quas,
+                exercitationem quam voluptatibus maxime perspiciatis, hic iure
+                quos cumque necessitatibus sit architecto facere aperiam fugit
+                voluptates. Cumque, delectus error quod odio suscipit culpa quis?
+                Ullam autem maxime nostrum reprehenderit mollitia.
+            </p>
+
+            <div class="producto imagen-sprite"></div>
+        </article>
+
+        <article class="registro">
+            <div class="figura imagen-sprite"></div>
+
+            <p class="descripcion">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Quisquam minima blanditiis porro corporis incidunt dolorum quas,
+                exercitationem quam voluptatibus maxime perspiciatis, hic iure
+                quos cumque necessitatibus sit architecto facere aperiam fugit
+                voluptates. Cumque, delectus error quod odio suscipit culpa quis?
+                Ullam autem maxime nostrum reprehenderit mollitia.
+            </p>
+
+            <div class="producto imagen-sprite"></div>
+        </article>
+
+        <article class="registro">
+            <div class="figura imagen-sprite"></div>
+
+            <p class="descripcion">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Quisquam minima blanditiis porro corporis incidunt dolorum quas,
+                exercitationem quam voluptatibus maxime perspiciatis, hic iure
+                quos cumque necessitatibus sit architecto facere aperiam fugit
+                voluptates. Cumque, delectus error quod odio suscipit culpa quis?
+                Ullam autem maxime nostrum reprehenderit mollitia.
+            </p>
+
+            <div class="producto imagen-sprite"></div>
+        </article>
+
+        <article class="registro">
+            <div class="figura imagen-sprite"></div>
+
+            <p class="descripcion">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Quisquam minima blanditiis porro corporis incidunt dolorum quas,
+                exercitationem quam voluptatibus maxime perspiciatis, hic iure
+                quos cumque necessitatibus sit architecto facere aperiam fugit
+                voluptates. Cumque, delectus error quod odio suscipit culpa quis?
+                Ullam autem maxime nostrum reprehenderit mollitia.
+            </p>
+
+            <div class="producto imagen-sprite"></div>
+        </article>
+
     </section>
 
-    <footer>
-        <div class="grupo recurso"></div>
-        <nav>
+    <footer class="pie-pagina">
+
+        <div class="imagen-grupal imagen-sprite"></div>
+
+        <nav class="menu-secundario">
             <a href="#">Principal</a>
             <a href="#">Empresa</a>
-            <a href="#">Galería</a>
-            <a href="#">Soluciones</a>
-            <a href="#">Comunícate</a>
+            <a href="#">Proyectos</a>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
         </nav>
+
     </footer>
+
 </body>
 </html>
 ```
