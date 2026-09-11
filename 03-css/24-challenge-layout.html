@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>24-Challenge Layout</title>
     <style>
-        body.reto {
+        body.panel {
             margin: 0;
             background-color: #149548;
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        .sprite {
+        .recurso {
             background-image: url(../src/imgs/spriteweb.png);
             background-repeat: no-repeat;
         }
@@ -21,7 +22,7 @@
             padding: 3rem 1rem 2rem;
         }
 
-        header .logo {
+        header .emblema {
             width: 235px;
             height: 209px;
             background-position: -5px -5px;
@@ -52,7 +53,7 @@
             border-bottom-color: gold;
         }
 
-        .portafolio {
+        .galeria {
             display: flex;
             gap: 1.3rem;
             max-width: 1100px;
@@ -61,7 +62,7 @@
             background-color: #11542b;
         }
 
-        .portafolio .tarjeta {
+        .galeria .bloque {
             position: relative;
             flex: 1;
             height: 222px;
@@ -69,13 +70,13 @@
             overflow: hidden;
         }
 
-        .portafolio .tarjeta .sprite {
+        .galeria .bloque .recurso {
             width: 100%;
             height: 100%;
             background-position: -465px 0;
         }
 
-        .portafolio .tarjeta h3 {
+        .galeria .bloque h3 {
             position: absolute;
             top: 0;
             left: 0;
@@ -87,11 +88,11 @@
             background-color: rgba(255, 255, 255, 0.5);
         }
 
-        .portafolio .tarjeta:hover h3 {
+        .galeria .bloque:hover h3 {
             background-color: rgba(255, 255, 255, 0.8);
         }
 
-        .contenido {
+        .informacion {
             display: flex;
             flex-direction: column;
             gap: 0.6rem;
@@ -101,7 +102,7 @@
             background-color: #11542b;
         }
 
-        .contenido .fila {
+        .informacion .registro {
             display: flex;
             align-items: center;
             gap: 2rem;
@@ -109,14 +110,14 @@
             background-color: #fff;
         }
 
-        .contenido .fila .icono {
+        .informacion .registro .simbolo {
             width: 86px;
             height: 95px;
             flex-shrink: 0;
             background-position: -299px -493px;
         }
 
-        .contenido .fila p {
+        .informacion .registro p {
             flex: 1;
             margin: 0;
             color: #333;
@@ -124,11 +125,11 @@
             text-align: justify;
         }
 
-        .contenido .fila:hover p {
+        .informacion .registro:hover p {
             color: #1e7d3c;
         }
 
-        .contenido .fila .lata {
+        .informacion .registro .envase {
             width: 90px;
             height: 157px;
             flex-shrink: 0;
@@ -143,7 +144,7 @@
             background-color: #fff;
         }
 
-        footer .familia {
+        footer .grupo {
             width: 335px;
             height: 182px;
             margin: 0 auto 1.5rem;
@@ -170,70 +171,75 @@
         }
     </style>
 </head>
-<body class="reto">
+<body class="panel">
     <header>
-        <div class="logo sprite"></div>
+        <div class="emblema recurso"></div>
         <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Nosotros</a>
-            <a href="#">Portafolio</a>
-            <a href="#">Servicios</a>
-            <a href="#">Contacto</a>
+            <a href="#">Principal</a>
+            <a href="#">Empresa</a>
+            <a href="#">Galería</a>
+            <a href="#">Soluciones</a>
+            <a href="#">Comunícate</a>
         </nav>
     </header>
 
-    <section class="portafolio">
-        <div class="tarjeta">
-            <h3>Sprite 01</h3>
-            <div class="sprite"></div>
+    <section class="galeria">
+        <div class="bloque">
+            <h3>Elemento A</h3>
+            <div class="recurso"></div>
         </div>
-        <div class="tarjeta">
-            <h3>Sprite 02</h3>
-            <div class="sprite"></div>
+        <div class="bloque">
+            <h3>Elemento B</h3>
+            <div class="recurso"></div>
         </div>
-        <div class="tarjeta">
-            <h3>Sprite 03</h3>
-            <div class="sprite"></div>
+        <div class="bloque">
+            <h3>Elemento C</h3>
+            <div class="recurso"></div>
         </div>
     </section>
 
-    <section class="contenido">
-        <div class="fila">
-            <div class="icono sprite"></div>
+    <section class="informacion">
+        <div class="registro">
+            <div class="simbolo recurso"></div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.</p>
-            <div class="lata sprite"></div>
+            <div class="envase recurso"></div>
         </div>
-        <div class="fila">
-            <div class="icono sprite"></div>
+
+        <div class="registro">
+            <div class="simbolo recurso"></div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.</p>
-            <div class="lata sprite"></div>
+            <div class="envase recurso"></div>
         </div>
-        <div class="fila">
-            <div class="icono sprite"></div>
+
+        <div class="registro">
+            <div class="simbolo recurso"></div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.</p>
-            <div class="lata sprite"></div>
+            <div class="envase recurso"></div>
         </div>
-        <div class="fila">
-            <div class="icono sprite"></div>
+
+        <div class="registro">
+            <div class="simbolo recurso"></div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.</p>
-            <div class="lata sprite"></div>
+            <div class="envase recurso"></div>
         </div>
-        <div class="fila">
-            <div class="icono sprite"></div>
+
+        <div class="registro">
+            <div class="simbolo recurso"></div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.</p>
-            <div class="lata sprite"></div>
+            <div class="envase recurso"></div>
         </div>
     </section>
 
     <footer>
-        <div class="familia sprite"></div>
+        <div class="grupo recurso"></div>
         <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Nosotros</a>
-            <a href="#">Portafolio</a>
-            <a href="#">Servicios</a>
-            <a href="#">Contacto</a>
+            <a href="#">Principal</a>
+            <a href="#">Empresa</a>
+            <a href="#">Galería</a>
+            <a href="#">Soluciones</a>
+            <a href="#">Comunícate</a>
         </nav>
     </footer>
 </body>
 </html>
+```
