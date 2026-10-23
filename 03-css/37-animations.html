@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-CSS</title>
+    <link rel="stylesheet" href="../src/css/master.css" />
+    <style>
+      section {
+        div.jungle {
+          background: url(imgs/jungle.png) no-repeat center / contain;
+          margin: 0 auto;
+          position: relative;
+          height: 460px;
+          width: 320px;
+
+          img.logo {
+            position: absolute;
+            transform: scale(0.5);
+            animation: 2.8s animLogo ease-in infinite;
+            top: 20px;
+          }
+
+          img.dk {
+            position: absolute;
+            left: 90px;
+            top: 170px;
+            width: 140px;
+            animation: 2s animDK ease-in-out infinite;
+          }
+
+          div.move {
+            position: absolute;
+            left: 30px;
+            top: 300px;
+          }
+
+          img.ryno {
+            width: 100px;
+            animation: 2s animRyno ease-in-out infinite;
+          }
+        }
+      }
+
+      @keyframes animLogo {
+        0%,
+        100% {
+          transform: scale(0.7);
+        }
+
+        50% {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes animDK {
+        0% {
+          transform: translateY(0px) translateX(0px);
+        }
+
+        20% {
+          transform: translateY(-120px) translateX(0px);
+        }
+
+        35% {
+          transform: translateY(-120px) translateX(60px);
+        }
+
+        50% {
+          transform: translateY(-120px) translateX(60px);
+        }
+
+        75% {
+          transform: translateY(-60px) translateX(60px);
+        }
+
+        100% {
+          transform: translateY(0px) translateX(0px);
+        }
+      }
+
+      @keyframes animRyno {
+        0%,
+        20% {
+          transform: translateX(0px);
+        }
+
+        35% {
+          transform: translateX(100px);
+        }
+
+        50% {
+          transform: translateX(100px);
+        }
+
+        75% {
+          transform: translateX(0px);
+        }
+
+        100% {
+          transform: translateX(0px);
+        }
+      }
+    </style>
+  </head>
+
+  <body class="css">
+    <a href="index.html" class="btn-home">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        fill="#000000"
+        viewBox="0 0 256 256"
+      >
+        <path
+          d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"
+        ></path>
+      </svg>
+    </a>
+    <main>
+      <header class="mainmenu">
+        <h1>37-Animations</h1>
+        <h4>
+          Funcionalidad que utiliza @keyframes para crear secuencias de
+          animación complejas paso a paso sin depender de
+          JavaScript.Funcionalidad que utiliza @keyframes para crear secuencias
+          de animación complejas paso a paso sin depender de JavaScript.
+        </h4>
+      </header>
+      <section>
+        <div class="jungle">
+          <img src="imgs/logo-dk.png" class="logo" />
+          <img src="imgs/dk.png" class="dk" />
+          <div class="move">
+            <img src="imgs/ryno.png" class="ryno" />
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
