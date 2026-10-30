@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>39-Challenge: Responsive Design</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap');
+
+        * {
+            transition: all 0.5s ease;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Poppins, sans-serif;
+            padding: 1rem;
+
+            main {
+                border: 10px solid #fff;
+                padding: 1rem;
+                margin: 0 auto;
+                width: 1200px;
+
+                header {
+                    figure.logo {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        gap: 1rem;
+                        margin: 0 auto;
+                        padding: 0;
+                        width: 100%;
+
+                        img {
+                            display: block;
+                            width: 100%;
+                            height: 250px;
+                            object-fit: contain;
+                            background-color: #000;
+                        }
+                    }
+
+                    menu {
+                        padding: 0;
+
+                        a:is(:link, :visited) {
+                            background-color: #fff;
+                            color: #013571;
+                            font-size: 1.2rem;
+                            font-weight: 500;
+                            text-decoration: none;
+                            text-align: center;
+                            padding: 0.4rem 0.8rem;
+                            display: inline-block;
+                            width: 204px;
+                            transition: all 0.5s ease;
+
+                            &:hover {
+                                transform: translateY(-8px) scale(1.02);
+                            }
+                        }
+                    }
+                }
+
+                section {
+                    h2 {
+                        text-align: center;
+                        font-size: 2.8rem;
+                        font-weight: 400;
+                    }
+
+                    h2:nth-of-type(2) { display: none; }
+                    h2:last-of-type { display: none; }
+
+                    p {
+                        text-align: justify;
+                        line-height: 1.8rem;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 1280px) {
+            body {
+                main {
+                    width: 800px;
+
+                    header {
+                        figure.logo {
+                            grid-template-columns: repeat(2, 1fr);
+                        }
+
+                        menu {
+                            a:is(:link, :visited) {
+                                width: 124px;
+                            }
+                        }
+                    }
+
+                    section {
+                        h2:first-of-type { display: none; }
+                        h2:nth-of-type(2) { display: block; }
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 800px) {
+            body {
+                main {
+                    width: 380px;
+
+                    header {
+                        figure.logo {
+                            grid-template-columns: 1fr;
+                        }
+
+                        menu {
+                            a:is(:link, :visited) {
+                                display: block;
+                                width: 350px;
+                                margin-bottom: 0.2rem;
+                            }
+                        }
+                    }
+
+                    section {
+                        h2:nth-of-type(2) { display: none; }
+
+                        h2:last-of-type {
+                            font-size: 2rem;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+
+<body class="css">
+    <a href="index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path
+                d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
+            </path>
+        </svg>
+    </a>
+
+    <main>
+        <header>
+            <figure class="logo">
+                <img src="imgs/scream01.png" alt="Ghostface con un cuchillo">
+                <img src="imgs/scream02.png" alt="Ghostface detrás de un joven">
+                <img src="imgs/scream03.png" alt="Ghostface en una escalera">
+                <img src="imgs/scream04.png" alt="Ghostface en una habitación">
+            </figure>
+
+            <menu>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Products</a>
+                <a href="#">Contact</a>
+            </menu>
+        </header>
+
+        <section>
+            <h2>Desktop: (> 1280px)</h2>
+            <h2>Tablet: (> 800px)</h2>
+            <h2>Mobile: (< 800px)</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptate veniam ipsam animi
+                        doloribus ut veritatis explicabo consectetur dicta, itaque et odit pariatur eius deserunt fugit
+                        architecto nam earum nemo delectus vel repellat. Perferendis itaque vitae, sequi aliquam
+                        praesentium saepe vel cum eaque officiis. Accusamus beatae voluptas illo, sed sequi aperiam
+                        ratione sit ipsa aliquid hic voluptatibus, adipisci quibusdam commodi possimus? Hic est, harum
+                        ullam, autem, voluptates praesentium quam quo vero provident temporibus voluptas minus a ad
+                        fugit culpa nihil nesciunt dolorem illum sed. Quibusdam tenetur illum eaque? Aut libero veniam
+                        optio aliquam esse ad inventore nobis error rem totam animi odio illo doloremque exercitationem
+                        eum fugit praesentium fuga consectetur ratione sint, modi ab. Magnam voluptas error numquam
+                        veniam aperiam!
+                    </p>
+        </section>
+
+    </main>
+</body>
+
+</html>
