@@ -5,108 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>45-Challenge Grid</title>
     <link rel="stylesheet" href="../src/css/master.css" />
+
     <style>
-      img {
-        width: 100%;
-        height: 100%;
+      * {
+        box-sizing: border-box;
+      }
+
+      section {
+        width: 777px;
+        max-width: 1400px;
+        margin: 20px auto;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.75);
       }
 
       .wrapper {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 200px 200px 200px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         grid-gap: 10px;
         min-height: 100vh;
+        width: 100%;
       }
 
-      .div1 {
-        grid-column-start: 1;
-        grid-column-end: 2;
+      .wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+        border: 4px solid white;
       }
 
-      .div2 {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 3;
+      .img1 {
+        grid-column: 1;
+        grid-row: 1;
       }
 
-      .div3 {
-        grid-column-start: 3;
-        grid-column-end: 4;
+      .img2 {
+        grid-column: 2;
+        grid-row: 1 / 3;
       }
 
-      .div4 {
-        grid-column-start: 1;
-        grid-column-end: 2;
+      .img3 {
+        grid-column: 3;
+        grid-row: 1;
       }
 
-      .div5 {
-        grid-column-start: 3;
-        grid-column-end: 4;
+      .img4 {
+        grid-column: 1;
+        grid-row: 2;
       }
 
-      .div6 {
-        grid-column-start: 1;
-        grid-column-end: 3;
+      .img5 {
+        grid-column: 3;
+        grid-row: 2;
       }
 
-      .div7 {
-        grid-column-start: 3;
-        grid-column-end: 4;
+      .img6 {
+        grid-column: 1 / 3;
+        grid-row: 3;
+      }
+
+      .img7 {
+        grid-column: 3;
+        grid-row: 3;
       }
 
       .wrapper2 {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 200px 200px 200px;
-        grid-gap: 10px;
-        min-height: 100vh;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 8px;
+        min-height: 600px;
+        width: 100%;
       }
 
-      .div8 {
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 3;
+      .wrapper2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+        border: 4px solid white;
       }
 
-      .div9 {
-        grid-column-start: 3;
-        grid-column-end: 4;
+      .img8 {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
       }
 
-      .div10 {
-        grid-column-start: 4;
-        grid-column-end: 5;
+      .img9 {
+        grid-column: 3;
+        grid-row: 1;
       }
 
-      .div11 {
-        grid-column-start: 1;
-        grid-column-end: 2;
+      .img10 {
+        grid-column: 4;
+        grid-row: 1;
       }
 
-      .div12 {
-        grid-column-start: 2;
-        grid-column-end: 3;
+      .img11 {
+        grid-column: 3 / 5;
+        grid-row: 2 / 4;
       }
 
-      .div13 {
-        grid-column-start: 3;
-        grid-column-end: 5;
-        grid-row-start: 2;
-        grid-row-end: 4;
+      .img12 {
+        grid-column: 1;
+        grid-row: 3;
       }
 
-      .wrapper * {
-        background: #4875b4;
-        color: #c5d0e6;
-        font-family: Arial;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 1px;
-        margin-right: 1px;
+      .img13 {
+        grid-column: 2;
+        grid-row: 3;
       }
     </style>
   </head>
@@ -125,6 +134,7 @@
         ></path>
       </svg>
     </a>
+
     <main>
       <header>
         <h1 class="mainmenu">45-Challenge Grid</h1>
@@ -133,59 +143,25 @@
           utilizing CSS Grid spanning properties (grid-column, grid-row).
         </h4>
       </header>
+
       <section>
         <div class="wrapper">
-          <div class="div1">
-            <img src="imgs/V1.jpg" />
-          </div>
+          <img class="img1" src="imgs/V1.jpg" />
+          <img class="img2" src="imgs/V2.jpg" />
+          <img class="img3" src="imgs/V3.jpg" />
+          <img class="img4" src="imgs/V4.jpg" />
+          <img class="img5" src="imgs/V5.jpg" />
+          <img class="img6" src="imgs/V6.jpg" />
+          <img class="img7" src="imgs/S7.jpg" />
+        </div>
 
-          <div class="div2">
-            <img src="imgs/V2.jpg" />
-          </div>
-
-          <div class="div3">
-            <img src="imgs/V3.jpg" />
-          </div>
-
-          <div class="div4">
-            <img src="imgs/V4.jpg" />
-          </div>
-
-          <div class="div5">
-            <img src="imgs/V5.jpg" />
-          </div>
-
-          <div class="div6">
-            <img src="imgs/V6.jpg" />
-          </div>
-
-          <div class="div7">
-            <img src="imgs/S7.jpg" />
-          </div>
-
-          <div class="div8">
-            <img src="imgs/S8.jpg" />
-          </div>
-
-          <div class="div9">
-            <img src="imgs/S9.jpg" />
-          </div>
-
-          <div class="div10">
-            <img src="imgs/S10.jpg" />
-          </div>
-
-          <div class="div11">
-            <img src="imgs/S11.jpg" />
-          </div>
-
-          <div class="div12">
-            <img src="imgs/S12.jpg" />
-          </div>
-
-          <div class="div13">
-            <img src="imgs/S13.jpg" />
-          </div>
+        <div class="wrapper2">
+          <img class="img8" src="imgs/S8.jpg" />
+          <img class="img9" src="imgs/S9.jpg" />
+          <img class="img10" src="imgs/S10.jpg" />
+          <img class="img11" src="imgs/S11.jpg" />
+          <img class="img12" src="imgs/S12.jpg" />
+          <img class="img13" src="imgs/S13.jpg" />
         </div>
       </section>
     </main>
